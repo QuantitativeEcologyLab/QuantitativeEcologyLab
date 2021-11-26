@@ -1,3 +1,3 @@
 # QuantitativeEcologyLab
 
-https://noonanm.github.io/QuantitativeEcologyLab/
+https://quantitativeecologylab.github.io/QuantitativeEcologyLab/
