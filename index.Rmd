@@ -71,6 +71,15 @@ Sandra Cuadros |
 
 Doctoral Candidate, Department of Biology
 
+</br>
+
+<img src="Images/Gill.png" alt="drawing" width="20%"/>
+
+Ryan Gill |
+<a href="mailto:rygill@gmail.com"><i class="fas fa-envelope"></i></a>
+
+MSc Candidate, Department of Biology
+
 </center>
 
 
