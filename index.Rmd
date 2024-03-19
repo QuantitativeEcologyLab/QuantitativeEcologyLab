@@ -43,7 +43,7 @@ The Quantitative Ecology Lab is focused on protecting vulnerable species. We use
 <center> <h3>QUANTITATIVE ECOLOGY LAB HEAD</h3> </center>
 
 <center>
-<img src="Images/MikeN.png" alt="drawing" width="20%"/>
+<img src="Images/members/MikeN.png" alt="drawing" width="20%"/>
 
 
 Dr. Michael Noonan |
@@ -58,27 +58,76 @@ Assistant Professor, Department of Biology
 
 </br>
 
+
+<center> <h3>RESEARCH ASSOCIATES</h3> </center>
+
+<center>
+<span style="font-size: 3em;">😊</span>
+
+
+April Martinig |
+
+Post-Doctoral, Department of Biology
+
+<center>
+
+</br>
+
 <center> <h3>GRADUATE STUDENTS</h3> </center>
 
 <center>
-<img src="Images/Sandra_Cuadros.png" alt="drawing" width="20%"/>
+<img src="Images/members/stefano_mezzini.png" alt="drawing" width="20%"/>
 
 
-Sandra Cuadros |
-<a href="mailto:sandra.scd88@gmail.com"><i class="fas fa-envelope"></i></a> 
-<a href="https://twitter.com/sandracuadros11"><i class="fab fa-twitter"></i></a> 
-<a href="https://www.instagram.com/wayra_killari"><i class="fab fa-instagram"></i></a> 
+Stefano Mezzini |
+<a href="mailto:stefano.mezzini@ubc.ca"><i class="fas fa-envelope"></i></a> 
+<a href="https://scholar.google.ca/citations?user=DVhTn8QAAAAJ&hl=en&inst=17001591832933267808"><i class="fas fa-graduation-cap"></i></a> 
+<a href="https://github.com/StefanoMezzini/"><i class="fab fa-github"></i></a>
+<a href="https://www.researchgate.net/profile/Stefano_Mezzini/"><i class="fab fa-researchgate"></i></a> 
 
 Doctoral Candidate, Department of Biology
 
 </br>
 
-<img src="Images/Gill.png" alt="drawing" width="20%"/>
+<img src="Images/members/Sandra_Cuadros.png" alt="drawing" width="20%"/>
+
+Sandra Cuadros |
+<a href="mailto:sandra.cuadros@ubc.ca"><i class="fas fa-envelope"></i></a> 
+<a href="https://twitter.com/sandracuadros11"><i class="fab fa-twitter"></i></a> 
+<a href="https://www.instagram.com/wayra_killari"><i class="fab fa-instagram"></i></a> 
+<a href="https://www.linkedin.com/in/sandra-cuadros-a533506a/"><i class="fab fa-linkedin"></i></a> 
+
+Doctoral Student, Department of Biology
+
+</br>
+
+<img src="Images/members/Gill.png" alt="drawing" width="20%"/>
 
 Ryan Gill |
 <a href="mailto:rygill@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/rygill/"><i class="fab fa-github"></i></a>
 
-MSc Candidate, Department of Biology
+MSc Student, Department of Biology
+
+</br>
+
+<img src="Images/members/lauren_mills.jpg" alt="drawing" width="20%"/>
+
+Lauren Mills |
+<a href="mailto:mills.lauren@hotmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/MillsCL/"><i class="fab fa-github"></i></a>
+
+MSc Student, Department of Biology
+
+</br>
+
+<img src="Images/members/chhen.jpg" alt="drawing" width="20%"/>
+
+Aimee Chhen |
+<a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/aimeechhen/"><i class="fab fa-github"></i></a>
+
+MSc Student, Department of Biology
 
 </center>
 
@@ -87,11 +136,75 @@ MSc Candidate, Department of Biology
 <center> <h3>UNDERGRADUATE STUDENTS</h3> </center>
 
 <center>
-<img src="Images/D_Weststrate.png" alt="drawing" width="20%"/>
+<img src="Images/members/ErikaLin.jpg" alt="drawing" width="20%"/>
+
+Erika Lin |
+<a href="mailto:elinrg26@student.ubc.ca"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/ErikaYLin"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/erika-y-lin/"><i class="fab fa-linkedin"></i></a> 
+
+</br>
+
+<span style="font-size: 3em;">😊</span>
+
+Rekha Marcus | 
+
+</br>
+
+<span style="font-size: 3em;">😊</span>
+
+Nozo Hirama|
+
+</br>
+
+<span style="font-size: 3em;">😊</span>
 
 
-Dayna Westsrate |
+Daniella de Vries |
+<a href="mailto:ddvries762@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/daniella-de-vries-1a0761184/"><i class="fab fa-linkedin"></i></a>
+
+</br>
+
+<span style="font-size: 3em;">😊</span>
+
+Grace Lou |
+<a href="mailto:gracelouyanlam@gmail.com"><i class="fas fa-envelope"></i></a>
+
+</br>
+
+<span style="font-size: 3em;">😊</span>
+
+Victoria Baker |
+
+</center>
+
+</br>
+
+
+<center> <h3> FORMER UNDERGRADUATE STUDENTS</h3> </center>
+
+
+<center>
+<img src="Images/members/D_Weststrate.png" alt="drawing" width="20%"/>
+
+Dayna Westsrate | 2022-2023
 <a href="mailto:daynakade@shaw.ca"><i class="fas fa-envelope"></i></a> 
+
+</br>
+
+<img src="Images/members/chhen.jpg" alt="drawing" width="20%"/>
+
+Aimee Chhen | 2022-2023
+<a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a> 
+
+</br>
+
+Evan Lewis | 2022
+
+</br>
+
+Joy Savanagoude | 2022
 
 </center>
 
@@ -104,6 +217,8 @@ Dayna Westsrate |
 
 <center> <h2>RESEARCH</h2> </center>
 </br>
+
+<div style="text-align: left;">
 
 Species conservation is a multi-faceted challenge that requires effort from people with skillsets ranging from applied ecology, economics, social sciences, data science, and biogeography to name only a few. For the efforts of this community to succeed, the evidence that is being used to inform conservation decisions must be accurate and reliable. UBC Okanagan's Quantitative Ecology Lab is focused on supporting the statistically efficient integration of data into ecological theory and conservation initiatives. To this end, the lab's work follows a step-wise process of methods development, testing, refinement, and application structured around two separate, but complimentary lines of research. The first falls under an umbrella called 'Biology or bias', and is aimed at understanding when/why different statistical approaches lead to differing conclusions, and how to avoid estimation bias. The second focuses on macro-ecology and global conservation by pairing high quality data with cutting edge analytical tools.
 
@@ -123,6 +238,8 @@ The Quantitative Ecology lab has established an international team, comprised of
 </br>
 </br>
 
+</div>
+
 <center>
 <img src="Images/Collaboration_Map_Full.png" alt="drawing" width="90%"/>
 </center>
@@ -135,12 +252,31 @@ The Quantitative Ecology lab has established an international team, comprised of
 <center> <h2>PUBLICATIONS</h2> </center>
 </br>
 
+<div style="text-align: left;">
+
 <a href="#CONTACT">Contact</a> the lab if you would like PDFs of any of the publications listed on this page.
 
 </br>
 
-#### 2022   {.tabset} 
+#### 2024   {.tabset} 
 
+* __Westsrate D__, __Chhen A__, __Mezzini S__ & __Noonan MJ__. (2024) How climate change and population growth will shape attendance and human-wildlife interactions at British Columbia parks. DOI: https://doi.org/10.1080/09669582.2024.2331228.
+
+##### 2023
+
+* __Chhen A__, Bertassoni A, Desbiez ALJ & __Noonan MJ__. (2023) The socio-spatial ecology of giant anteaters in the Brazilian Cerrado. bioRxiv; DOI: https://doi.org/10.1101/2023.10.04.560744.
+
+* __Gills R__, Serrouy R, Calver AM, Ford A, Steenwe R & __Noonan MJ__. (2023) Movement ecology of endangered caribou during a COVID-19 mediated pause in winter recreation. Animal Conservation; DOI: https://doi.org/10.1111/acv.12912.
+
+* __Mezzini S__, Fleming CH, Medici EP, & __Noonan MJ__. (2023) How resource abundance and stochasticity affect organisms’ space-use requirements. bioRxiv; DOI: https://doi.org/10.1101/2023.11.03.565563. 
+
+* __Noonan MJ__, Grechi N, __Mills CL__ & Ferraz MAMM (2023) Microplastics analytics: why we should not underestimate the importance of blank controls. Microplastics and Nanoplastics, 3(17), 1-8; DOI: https://doi.org/10.1186/s43591-023-00065-3.
+
+*  __Mills CL__, __Savanagouder J__, Ferraz MAMM, & __Noonan MJ__ (2023) The need for environmentally realistic studies on the health effects of terrestrial microplastics. Microplastics and Nanoplastics, 3(11), 1-6; DOI: https://doi.org/10.1186/s43591-023-00059-1.
+
+##### 2022
+
+* __Mills CL__, __Savanagouder J__, Ferraz MAMM, & __Noonan MJ__. (2022) The need for ecologically realistic studies on the health effects of microplastics. bioRxiv; DOI: https://doi.org/10.1101/2022.11.21.517421.
 
 * Socias-Martínez L, Peckre LR, & __Noonan MJ__. (2022) Are trapping data still suited for home range estimation? An analysis with various estimators, asymptotic models and data ordering procedures. bioRxiv; DOI: https://doi.org/10.1101/2022.03.15.484432.
 
@@ -152,13 +288,13 @@ The Quantitative Ecology lab has established an international team, comprised of
 
 * __Noonan MJ__, Fagan WF, & Fleming CH. (2022) A semi-variance approach to visualising phylogenetic autocorrelation. Methods in 13(2), 396 – 406; DOI: https://doi.org/10.1111/2041-210X.13763.
 
-* Silva I, Fleming CH __Noonan MJ__, Alston J, Folta C, Fagan WF, & Calabrese JM. (2022) A semi-variance approach to visualising phylogenetic autocorrelation. Methods in Ecology and Evolution, 13(3), 534 – 544 DOI: https://doi.org/10.1111/2041-210X.13786.
+* Silva I, Fleming CH __Noonan MJ__, Alston J, Folta C, Fagan WF, & Calabrese JM. (2022) A semi-variance approach to visualising phylogenetic autocorrelation. Methods in Ecology and Evolution, 13(3), 534 – 544. DOI: https://doi.org/10.1111/2041-210X.13786.
 
 ##### 2021
 
-* Fleming CH, Drescher-Lehman J, __Noonan MJ__ (with 34 other authors)..., & Calabrese JM. (2021) A comprehensive framework for handling location error in animal tracking data.  bioRxiv DOI: https://doi.org/10.1101/2020.06.12.130195.
+* Fleming CH, Drescher-Lehman J, __Noonan MJ__ (with 34 other authors)..., & Calabrese JM. (2021) A comprehensive framework for handling location error in animal tracking data. bioRxiv; DOI: https://doi.org/10.1101/2020.06.12.130195.
 
-* __Noonan MJ__, Ascensão F, Yogui DR, Desbiez ALJ. Roads as ecological traps for giant anteaters. Animal Conservation, 25(2), 182–194. DOI: https://doi.org/10.1111/acv.12728.
+* __Noonan MJ__, Ascensão F, Yogui DR, Desbiez ALJ. Roads as ecological traps for giant anteaters. Animal Conservation, 25(2), 182 – 194. DOI: https://doi.org/10.1111/acv.12728.
 
 * __Noonan MJ__...(11 other authors)..., & Calabrese JM. (2021) Estimating encounter location distributions from animal tracking data. Methods in Ecology and Evolution, 12(7), 1158 – 1173. DOI:  https://doi.org/10.1111/2041-210X.13597.
 
@@ -190,7 +326,6 @@ The Quantitative Ecology lab has established an international team, comprised of
 * __Noonan MJ__, ...(53 other authors)..., & Calabrese JM. (2019). A comprehensive analysis of autocorrelation and bias in home range estimation. Ecological Monographs, 89(2):e01344; DOI: https://doi.org/10.1002/ecm.1344.
 
 ##### 2018
-
 
 * __Noonan MJ__, Newman C, Markham A, Buesching CD, Bilham K, & Macdonald DW. (2018) _In situ_ behavioral plasticity as compensation for weather variability: implications for future climate change. Climatic Change, 149(3-4), 457–471; DOI: https://doi.org/10.1007/s10584-018-2248-5.
 
@@ -230,6 +365,7 @@ The Quantitative Ecology lab has established an international team, comprised of
 
 ## {-}
 
+</div>
 
 <a id="NEWS"></a> </br>
 <center>
@@ -239,20 +375,81 @@ The Quantitative Ecology lab has established an international team, comprised of
 <center> <h2>NEWS</h2> </center>
 </br>
 
-#### 2022 {.tabset} 
+<div style = "text-align: left;">
+
+#### 2024 {.tabset} 
+
+* Fresh off the presses! Dayna's first authored research paper, "How climate change and population growth will shape attendance and human-wildlife interactions at British Columbia parks" has been accepted and has been published in the Journal of Sustainable Tourism. Read it here:  https://doi.org/10.1080/09669582.2024.2331228. Congratulations Dayna!
+
+* Exciting news! Erika will be presenting at the MURC conference in British Columbia on a user-friendly software package in R for processing microbial genetic data.
+
+* Sandra Cuadros received the TWS travel grant to present her work at Wildlife Society Conference in Jasper, AB. Congratulations Sandra! 
+
+* Exciting news! Stefano, Sandra, Lauren and Aimee will be presenting their research at the Wildlife Society Conference in Jasper, AB.
+
+* April Martining is joining the lab as a post-doctoral researcher. Welcome April!
+
+* The Quantitative Ecology Lab participated in Experience UBCO 2024. Great turn out! Visitors were able to get their first experience in simulating animal movement.
+
+* Fantastic News! Stefano Mezzini has successfully passed his doctoral comprehensive exam. Congratulations Stefano! 
+
+* Victoria Baker is joining the lab to carry out a Directed Studies project focused on how timber harvest affects woodland caribou habitat and conservation. Welcome Victoria!
+
+##### 2023 
+
+* Aimee Chhen has been officially admitted to the MSc program at UBC-O. Welcome back Aimee!
+
+* Exciting news! Stefano will be presenting at the Gordon Research Conference and Gordon Research Seminar in Barga, Italy, on the effects of resource abundance and stochasticity on orgamism's space-use requirements. 
+
+* Stefano Mezzini received the UBCO travel grant to present his work at the the Gordon Research Conference and Gordon Research Seminar in Barga, Italy. Congratulations Stefano! 
+
+* Grace Lou is joining the lab to carry out an Honours project focused on modelling human wildlife conflicts with productivity in Canadian National Parks. Welcome Grace!
+
+* Daniella de Vries is joining the lab to carry out an Honours project the recovery rate of productivity of forests after disturbance events from wildfires and cut blocks in the Okanagan. Welcome Daniella!
+
+* Nozomu Hirama is joining the lab to carry out an Honours project focused on modelling long-term trends in mammalian sperm quality. Welcome Nozo!
+
+* Great news! Rekha Marcus has been awarded the Irving K. Barber Faculty of Science Undergraduate Research Award to study environmental conditions in protected areas and how we can better select protected areas. Congratulations Rekha!
+
+* Great News! Erika Lin has been awarded the UBCO Irving K. Barber Faculty of Science Undergraduate Research Award to building a workflow to study the effects of microplastics on soil microbiota. Congratulations Erika!
+
+* Rekha Marcus is joining the lab to carry out an Honours project focused on environmental conditions in protected areas and how we can better select protected areas. Welcome Rekha!
+
+* Erika Lin is joining the lab to carry out an Honours project focused on developing a user-friendly software package in R for processing microbial genetic data. Welcome Erika!
+
+* Exciting news! Dayna will be presenting at the MURC conference in British Columbia on the effect of climate change and population growth on attendance in BC Parks.
+
+* Stefano Mezzini has officially been admitted to fast-track to a PhD degree. Congratulations Stefano!
+
+##### 2022
+
+* Exciting news! Stefano presented at the PARF conference in Nanaimo, British Columbia, on the effects of temperature and climate change on mammal movement in British Columbia.
+
+* Exciting news! Dayna presented at the PARF conference in Nanaimo, British Columbia, the effect of climate change and population growth on attendance in BC Parks.
+
+* Exciting news! Stefano Mezzini was awarded the Top Talk and People's Choice at the UBC Okanagan Biology Graduate Symposium. Congratulations Stefano!
+
+* Stefano Mezzini has received funding from Living Labs to study the effects of temperature and climate change on mammal movement in British Columbia. Congratulations Stefano! 
+
+* Evan Lewis is joining the lab to carry out a Directed Studies project on avian ecology. Welcome Evan!
+
+* Aimee Chhen is joining the lab to carry out a Directed Studies project focused on the sociality of Giant Anteater in Brazil and an additional project on the human-wildlife interactions in National Parks in British Columbia. Welcome Aimee!
+
+* Dayna Westsrate is joining the lab to carry out an Honours project focused on the effect of climate change and population growth on attendance in BC Parks. Welcome Dayna!
 
 * Joy Savanagouder is joining the lab to carry out a summer research project focused on terrestrial microplastics. Welcome Joy!
+
+* Stefano Mezzini has received funding from MITACS to study the impacts of COVID-19 induced travel restrictions on southern mountain caribou. Congratulations Stefano! 
 
 * Ryan Gill has received funding from Environment and Climate Change Canada to study the impacts of COVID-19 induced travel restrictions on southern mountain caribou. Congratulations Ryan!
 
 * Sandra Cuadros has received a Future Conservationist Award (Conservation Leadership Programme). Congratulations Sandra!
 
-* Two new members have been officially admitted to graduate programs at UBC-O. Welcome Cynthia Lauren Mills and Helen Louise Bontrager!
+* Lauren Mills has been officially admitted to graduate programs at UBC-O to study. Welcome Lauren!
 
 * Good news! We've received funding from BC Parks to study the effects of climate change on mammals in BC. Funds will go to supporting student salaries.
 
 * Good news! We've received funding from Ludwig Maximilian University of Munich to study the effects of micro-plastics in terrestrial systems. Funds will go to hiring a lab-technician who will be based in Germany. Details here: https://twitter.com/MarciaFerraz11/status/1479197095076798466/photo/1
-
 
 ##### 2021
 
@@ -264,15 +461,19 @@ The Quantitative Ecology lab has established an international team, comprised of
 
 * Stefano Mezzini has been officially admitted to the MSc program at UBC-O. Welcome Stefano!
 
-* The quantitative Ecology Lab has been awarded an [NSERC Discovery Grant](https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ResearchGrants-SubventionsDeRecherche/ResultsGSCDetail-ResultatsCSSDetails_eng.asp?Year=2021&GSC=1503) to support the lab's work over the next 5 years.
+* The Quantitative Ecology Lab has been awarded an [NSERC Discovery Grant](https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ResearchGrants-SubventionsDeRecherche/ResultsGSCDetail-ResultatsCSSDetails_eng.asp?Year=2021&GSC=1503) to support the lab's work over the next 5 years.
 
+## {-}
 
+</div>
 
 <a id="OPPORTUNITIES"></a> </br>
 
 <img src="Images/okanagan_campus.jpg" alt="drawing" width="100%" />
 
 <center> <h2>OPPORTUNITIES</h2> </center>
+
+<div style = "text-align: left;">
 
 There are currently no open positions for which we are actively recruiting. However, if you're interested in joining the Quantitative Ecology Lab, you are welcome to email us your CV, unofficial transcripts, a brief blurb about yourself and your interests, and what aspects of the lab's research interest you.
 
@@ -295,6 +496,10 @@ General information about graduate studies at the Okanagan campus and in biology
 </br>
 &nbsp;
 
+## {-}
+
+</div>
+
 <a id="FUNDING"></a> </br>
 
 <center> <h2>FUNDING & PARTNERS</h2> </center>
@@ -305,6 +510,6 @@ General information about graduate studies at the Okanagan campus and in biology
 
 
 <center>
-<img src="Images/Funding_Partners.png" alt="drawing" width="30%" style="margin-top:3%;"/>
+<img src="Images/partners/Funding_Partners.png" alt="drawing" width="30%" style="margin-top:3%;"/>
 </center>
 </div>
