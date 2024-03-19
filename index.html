@@ -13,7 +13,7 @@
 
 <title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -142,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -175,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -184,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -288,9 +285,13 @@ $(document).ready(function () {
 <div class="wrap">
 <p><a id="HOME"></a> </br></p>
 <center>
-<p><img src="Images/Lab_Logo_Trans.png" alt="drawing" width="35%" style="margin-top:5%;"/> </br> </br></p>
+<p><img src="Images/Lab_Logo_Trans.png" alt="drawing" width="35%" style="margin-top:5%;"/>
+</br> </br></p>
 <div id="full">
-<p>The Quantitative Ecology Lab is focused on protecting vulnerable species. We use data driven approaches and cutting-edge statistics to ensure that the <em>evidence</em> used to support evidence based conservation is both accurate and reliable.</p>
+<p>The Quantitative Ecology Lab is focused on protecting vulnerable
+species. We use data driven approaches and cutting-edge statistics to
+ensure that the <em>evidence</em> used to support evidence based
+conservation is both accurate and reliable.</p>
 </div>
 </br> </br> </br>
 </center>
@@ -310,10 +311,25 @@ QUANTITATIVE ECOLOGY LAB HEAD
 </h3>
 </center>
 <center>
-<p><img src="Images/MikeN.png" alt="drawing" width="20%"/></p>
-<p>Dr. Michael Noonan | <a href="mailto:michael.noonan@ubc.ca"><i class="fas fa-envelope"></i></a> <a href="https://twitter.com/MikeNoonanUBC"><i class="fab fa-twitter"></i></a> <a href="https://scholar.google.com/citations?user=O5Wu4jMAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a> <a href="Files/Noonan_CV.pdf" target="_blank"><i class="fas fa-file-alt"></i></a></p>
+<p><img src="Images/members/MikeN.png" alt="drawing" width="20%"/></p>
+<p>Dr. Michael Noonan |
+<a href="mailto:michael.noonan@ubc.ca"><i class="fas fa-envelope"></i></a>
+<a href="https://twitter.com/MikeNoonanUBC"><i class="fab fa-twitter"></i></a>
+<a href="https://scholar.google.com/citations?user=O5Wu4jMAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+<a href="Files/Noonan_CV.pdf" target="_blank"><i class="fas fa-file-alt"></i></a></p>
 <p>Assistant Professor, Department of Biology</p>
 </center>
+<p></br></p>
+<center>
+<h3>
+RESEARCH ASSOCIATES
+</h3>
+</center>
+<center>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>April Martinig |</p>
+<p>Post-Doctoral, Department of Biology</p>
+<center>
 <p></br></p>
 <center>
 <h3>
@@ -321,13 +337,39 @@ GRADUATE STUDENTS
 </h3>
 </center>
 <center>
-<p><img src="Images/Sandra_Cuadros.png" alt="drawing" width="20%"/></p>
-<p>Sandra Cuadros | <a href="mailto:sandra.scd88@gmail.com"><i class="fas fa-envelope"></i></a> <a href="https://twitter.com/sandracuadros11"><i class="fab fa-twitter"></i></a> <a href="https://www.instagram.com/wayra_killari"><i class="fab fa-instagram"></i></a></p>
+<p><img src="Images/members/stefano_mezzini.png" alt="drawing" width="20%"/></p>
+<p>Stefano Mezzini |
+<a href="mailto:stefano.mezzini@ubc.ca"><i class="fas fa-envelope"></i></a>
+<a href="https://scholar.google.ca/citations?user=DVhTn8QAAAAJ&hl=en&inst=17001591832933267808"><i class="fas fa-graduation-cap"></i></a>
+<a href="https://github.com/StefanoMezzini/"><i class="fab fa-github"></i></a>
+<a href="https://www.researchgate.net/profile/Stefano_Mezzini/"><i class="fab fa-researchgate"></i></a></p>
 <p>Doctoral Candidate, Department of Biology</p>
 <p></br></p>
-<p><img src="Images/Gill.png" alt="drawing" width="20%"/></p>
-<p>Ryan Gill | <a href="mailto:rygill@gmail.com"><i class="fas fa-envelope"></i></a></p>
-<p>MSc Candidate, Department of Biology</p>
+<p><img src="Images/members/Sandra_Cuadros.png" alt="drawing" width="20%"/></p>
+<p>Sandra Cuadros |
+<a href="mailto:sandra.cuadros@ubc.ca"><i class="fas fa-envelope"></i></a>
+<a href="https://twitter.com/sandracuadros11"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/wayra_killari"><i class="fab fa-instagram"></i></a>
+<a href="https://www.linkedin.com/in/sandra-cuadros-a533506a/"><i class="fab fa-linkedin"></i></a></p>
+<p>Doctoral Student, Department of Biology</p>
+<p></br></p>
+<p><img src="Images/members/Gill.png" alt="drawing" width="20%"/></p>
+<p>Ryan Gill |
+<a href="mailto:rygill@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/rygill/"><i class="fab fa-github"></i></a></p>
+<p>MSc Student, Department of Biology</p>
+<p></br></p>
+<p><img src="Images/members/lauren_mills.jpg" alt="drawing" width="20%"/></p>
+<p>Lauren Mills |
+<a href="mailto:mills.lauren@hotmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/MillsCL/"><i class="fab fa-github"></i></a></p>
+<p>MSc Student, Department of Biology</p>
+<p></br></p>
+<p><img src="Images/members/chhen.jpg" alt="drawing" width="20%"/></p>
+<p>Aimee Chhen |
+<a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/aimeechhen/"><i class="fab fa-github"></i></a></p>
+<p>MSc Student, Department of Biology</p>
 </center>
 <p></br></p>
 <center>
@@ -336,8 +378,48 @@ UNDERGRADUATE STUDENTS
 </h3>
 </center>
 <center>
-<p><img src="Images/D_Weststrate.png" alt="drawing" width="20%"/></p>
-<p>Dayna Westsrate | <a href="mailto:daynakade@shaw.ca"><i class="fas fa-envelope"></i></a></p>
+<p><img src="Images/members/ErikaLin.jpg" alt="drawing" width="20%"/></p>
+<p>Erika Lin |
+<a href="mailto:elinrg26@student.ubc.ca"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/ErikaYLin"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/erika-y-lin/"><i class="fab fa-linkedin"></i></a></p>
+<p></br></p>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>Rekha Marcus |</p>
+<p></br></p>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>Nozo Hirama|</p>
+<p></br></p>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>Daniella de Vries |
+<a href="mailto:ddvries762@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://www.linkedin.com/in/daniella-de-vries-1a0761184/"><i class="fab fa-linkedin"></i></a></p>
+<p></br></p>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>Grace Lou |
+<a href="mailto:gracelouyanlam@gmail.com"><i class="fas fa-envelope"></i></a></p>
+<p></br></p>
+<p><span style="font-size: 3em;">😊</span></p>
+<p>Victoria Baker |</p>
+</center>
+<p></br></p>
+<center>
+<h3>
+FORMER UNDERGRADUATE STUDENTS
+</h3>
+</center>
+<center>
+<p><img src="Images/members/D_Weststrate.png" alt="drawing" width="20%"/></p>
+<p>Dayna Westsrate | 2022-2023
+<a href="mailto:daynakade@shaw.ca"><i class="fas fa-envelope"></i></a></p>
+<p></br></p>
+<p><img src="Images/members/chhen.jpg" alt="drawing" width="20%"/></p>
+<p>Aimee Chhen | 2022-2023
+<a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a></p>
+<p></br></p>
+<p>Evan Lewis | 2022</p>
+<p></br></p>
+<p>Joy Savanagoude | 2022</p>
 </center>
 <p></br></p>
 <p><a id="RESEARCH"></a> </br></p>
@@ -348,15 +430,61 @@ RESEARCH
 </h2>
 </center>
 <p></br></p>
-<p>Species conservation is a multi-faceted challenge that requires effort from people with skillsets ranging from applied ecology, economics, social sciences, data science, and biogeography to name only a few. For the efforts of this community to succeed, the evidence that is being used to inform conservation decisions must be accurate and reliable. UBC Okanagan’s Quantitative Ecology Lab is focused on supporting the statistically efficient integration of data into ecological theory and conservation initiatives. To this end, the lab’s work follows a step-wise process of methods development, testing, refinement, and application structured around two separate, but complimentary lines of research. The first falls under an umbrella called ‘Biology or bias’, and is aimed at understanding when/why different statistical approaches lead to differing conclusions, and how to avoid estimation bias. The second focuses on macro-ecology and global conservation by pairing high quality data with cutting edge analytical tools.</p>
+<div style="text-align: left;">
+<p>Species conservation is a multi-faceted challenge that requires
+effort from people with skillsets ranging from applied ecology,
+economics, social sciences, data science, and biogeography to name only
+a few. For the efforts of this community to succeed, the evidence that
+is being used to inform conservation decisions must be accurate and
+reliable. UBC Okanagan’s Quantitative Ecology Lab is focused on
+supporting the statistically efficient integration of data into
+ecological theory and conservation initiatives. To this end, the lab’s
+work follows a step-wise process of methods development, testing,
+refinement, and application structured around two separate, but
+complimentary lines of research. The first falls under an umbrella
+called ‘Biology or bias’, and is aimed at understanding when/why
+different statistical approaches lead to differing conclusions, and how
+to avoid estimation bias. The second focuses on macro-ecology and global
+conservation by pairing high quality data with cutting edge analytical
+tools.</p>
 <div id="biology-or-bias" class="section level2">
 <h2>Biology or Bias</h2>
-<p>Technological advances are transforming ecology as a field. Ecologists are now in a position to collect more accurate data for a larger number of species and individuals, and in more ecosystems than ever before. Problematically, however, statistical techniques for analysing these new and challenging datasets often lag behind. Worse, pairing these data with conventional statistical tools can lead to biased and potentially misleading results. With these issues in mind, the Quantitative Ecology Lab aims to bridge the gap between technological advances and practical ecology. Using carefully tailored experiments, we aim to clarify when analyses will work, when they should be avoided, what conditions cause them to fail, and to what extent that failure might be. This work provides researchers with the novel tools and practical guidelines needed to reliably answer ecological and conservation relevant questions from challenging and nuanced datasets. </br> </br></p>
+<p>Technological advances are transforming ecology as a field.
+Ecologists are now in a position to collect more accurate data for a
+larger number of species and individuals, and in more ecosystems than
+ever before. Problematically, however, statistical techniques for
+analysing these new and challenging datasets often lag behind. Worse,
+pairing these data with conventional statistical tools can lead to
+biased and potentially misleading results. With these issues in mind,
+the Quantitative Ecology Lab aims to bridge the gap between
+technological advances and practical ecology. Using carefully tailored
+experiments, we aim to clarify when analyses will work, when they should
+be avoided, what conditions cause them to fail, and to what extent that
+failure might be. This work provides researchers with the novel tools
+and practical guidelines needed to reliably answer ecological and
+conservation relevant questions from challenging and nuanced datasets.
+</br> </br></p>
 <p><img src="Images/Banner.png" alt="drawing" /> </br> </br></p>
 </div>
 <div id="macro-ecology-and-global-conservation" class="section level2">
 <h2>Macro-ecology and Global Conservation</h2>
-<p>The Quantitative Ecology lab has established an international team, comprised of &gt;80 of the world’s leading movement ecologists. Through this network of specialists, we have built one of the largest animal tracking dataset ever assembled, consisting of 1300 individuals representing 76 mammalian and avian species. With the average, all-in cost of tracking an animal being <a href="https://doi.org/10.1071/WR10211">∼$9,500</a>, this dataset can be valued at &gt;$11 million. Collectively this unprecedented dataset, and broad pool of expert knowledge make our team uniquely positioned to support global conservation efforts. Our lab uses these data to answer questions about the evolutionary history and function of key aspects of animal movement. We then use these higher level findings to contextualise species’ responses to human induced rapid environmental change (HIREC), and provide actionable findings for species conservation. </br> </br></p>
+<p>The Quantitative Ecology lab has established an international team,
+comprised of &gt;80 of the world’s leading movement ecologists. Through
+this network of specialists, we have built one of the largest animal
+tracking dataset ever assembled, consisting of 1300 individuals
+representing 76 mammalian and avian species. With the average, all-in
+cost of tracking an animal being <a
+href="https://doi.org/10.1071/WR10211">∼$9,500</a>, this dataset can be
+valued at &gt;$11 million. Collectively this unprecedented dataset, and
+broad pool of expert knowledge make our team uniquely positioned to
+support global conservation efforts. Our lab uses these data to answer
+questions about the evolutionary history and function of key aspects of
+animal movement. We then use these higher level findings to
+contextualise species’ responses to human induced rapid environmental
+change (HIREC), and provide actionable findings for species
+conservation. </br> </br></p>
+</div>
+</div>
 <center>
 <img src="Images/Collaboration_Map_Full.png" alt="drawing" width="90%"/>
 </center>
@@ -368,94 +496,299 @@ PUBLICATIONS
 </h2>
 </center>
 <p></br></p>
-<p><a href="#CONTACT">Contact</a> the lab if you would like PDFs of any of the publications listed on this page.</p>
+<div style="text-align: left;">
+<p><a href="#CONTACT">Contact</a> the lab if you would like PDFs of any
+of the publications listed on this page.</p>
 <p></br></p>
 <div id="section" class="section level4 tabset">
-<h4 class="tabset">2022</h4>
+<h4 class="tabset">2024</h4>
 <ul>
-<li><p>Socias-Martínez L, Peckre LR, &amp; <strong>Noonan MJ</strong>. (2022) Are trapping data still suited for home range estimation? An analysis with various estimators, asymptotic models and data ordering procedures. bioRxiv; DOI: <a href="https://doi.org/10.1101/2022.03.15.484432" class="uri">https://doi.org/10.1101/2022.03.15.484432</a>.</p></li>
-<li><p>Medici EP, <strong>Mezzini S</strong>, Fleming CH, Calabrese JM, &amp; <strong>Noonan MJ</strong>. (2021) Movement ecology of vulnerable lowland tapirs across a gradient of human disturbance. Movement Ecology, 10(1), 1-12; DOI: <a href="https://doi.org/10.1186/s40462-022-00313-w" class="uri">https://doi.org/10.1186/s40462-022-00313-w</a>.</p></li>
-<li><p>Milazzotto MP, <strong>Noonan MJ</strong>, &amp; Ferraz MAMM. (2021) RNAseq analysis reveals dynamic metaboloepigenetic profiles of human, mouse and bovine pre-implantation embryos. iScience, 25(3), 103904; DOI: <a href="https://doi.org/10.1101/2021.06.25.449773" class="uri">https://doi.org/10.1101/2021.06.25.449773</a>.</p></li>
-<li><p>Fleming CH, Deznabi I, Alavi S, Crofoot MC, Hirsch BT, Medici EP, <strong>MJ Noonan</strong>, Kays R, Fagan WF, Sheldon D, &amp; JM Calabrese JM (2022) Population-level inference for home-range areas. Methods in Ecology and Evolution, 13(5); 1027-1041; DOI: <a href="https://doi.org/10.1111/2041-210X.13815" class="uri">https://doi.org/10.1111/2041-210X.13815</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Fagan WF, &amp; Fleming CH. (2022) A semi-variance approach to visualising phylogenetic autocorrelation. Methods in 13(2), 396 – 406; DOI: <a href="https://doi.org/10.1111/2041-210X.13763" class="uri">https://doi.org/10.1111/2041-210X.13763</a>.</p></li>
-<li><p>Silva I, Fleming CH <strong>Noonan MJ</strong>, Alston J, Folta C, Fagan WF, &amp; Calabrese JM. (2022) A semi-variance approach to visualising phylogenetic autocorrelation. Methods in Ecology and Evolution, 13(3), 534 – 544 DOI: <a href="https://doi.org/10.1111/2041-210X.13786" class="uri">https://doi.org/10.1111/2041-210X.13786</a>.</p></li>
+<li><strong>Westsrate D</strong>, <strong>Chhen A</strong>,
+<strong>Mezzini S</strong> &amp; <strong>Noonan MJ</strong>. (2024) How
+climate change and population growth will shape attendance and
+human-wildlife interactions at British Columbia parks. DOI: <a
+href="https://doi.org/10.1080/09669582.2024.2331228"
+class="uri">https://doi.org/10.1080/09669582.2024.2331228</a>.</li>
 </ul>
 <div id="section-1" class="section level5">
-<h5>2021</h5>
+<h5>2023</h5>
 <ul>
-<li><p>Fleming CH, Drescher-Lehman J, <strong>Noonan MJ</strong> (with 34 other authors)…, &amp; Calabrese JM. (2021) A comprehensive framework for handling location error in animal tracking data. bioRxiv DOI: <a href="https://doi.org/10.1101/2020.06.12.130195" class="uri">https://doi.org/10.1101/2020.06.12.130195</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Ascensão F, Yogui DR, Desbiez ALJ. Roads as ecological traps for giant anteaters. Animal Conservation, 25(2), 182–194. DOI: <a href="https://doi.org/10.1111/acv.12728" class="uri">https://doi.org/10.1111/acv.12728</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>…(11 other authors)…, &amp; Calabrese JM. (2021) Estimating encounter location distributions from animal tracking data. Methods in Ecology and Evolution, 12(7), 1158 – 1173. DOI: <a href="https://doi.org/10.1111/2041-210X.13597" class="uri">https://doi.org/10.1111/2041-210X.13597</a>.</p></li>
-<li><p>Calabrese JM, Fleming CH, <strong>Noonan MJ</strong>, &amp; Dong X. (2021) Point-and-click AKDE home range estimation with ctmmweb. Wildlife Society Bulletin, 45(1), 162 – 169. DOI: <a href="https://doi.org/10.1002/wsb.1154" class="uri">https://doi.org/10.1002/wsb.1154</a>.</p></li>
+<li><p><strong>Chhen A</strong>, Bertassoni A, Desbiez ALJ &amp;
+<strong>Noonan MJ</strong>. (2023) The socio-spatial ecology of giant
+anteaters in the Brazilian Cerrado. bioRxiv; DOI: <a
+href="https://doi.org/10.1101/2023.10.04.560744"
+class="uri">https://doi.org/10.1101/2023.10.04.560744</a>.</p></li>
+<li><p><strong>Gills R</strong>, Serrouy R, Calver AM, Ford A, Steenwe R
+&amp; <strong>Noonan MJ</strong>. (2023) Movement ecology of endangered
+caribou during a COVID-19 mediated pause in winter recreation. Animal
+Conservation; DOI: <a href="https://doi.org/10.1111/acv.12912"
+class="uri">https://doi.org/10.1111/acv.12912</a>.</p></li>
+<li><p><strong>Mezzini S</strong>, Fleming CH, Medici EP, &amp;
+<strong>Noonan MJ</strong>. (2023) How resource abundance and
+stochasticity affect organisms’ space-use requirements. bioRxiv; DOI: <a
+href="https://doi.org/10.1101/2023.11.03.565563"
+class="uri">https://doi.org/10.1101/2023.11.03.565563</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Grechi N, <strong>Mills CL</strong>
+&amp; Ferraz MAMM (2023) Microplastics analytics: why we should not
+underestimate the importance of blank controls. Microplastics and
+Nanoplastics, 3(17), 1-8; DOI: <a
+href="https://doi.org/10.1186/s43591-023-00065-3"
+class="uri">https://doi.org/10.1186/s43591-023-00065-3</a>.</p></li>
+<li><p><strong>Mills CL</strong>, <strong>Savanagouder J</strong>,
+Ferraz MAMM, &amp; <strong>Noonan MJ</strong> (2023) The need for
+environmentally realistic studies on the health effects of terrestrial
+microplastics. Microplastics and Nanoplastics, 3(11), 1-6; DOI: <a
+href="https://doi.org/10.1186/s43591-023-00059-1"
+class="uri">https://doi.org/10.1186/s43591-023-00059-1</a>.</p></li>
 </ul>
 </div>
 <div id="section-2" class="section level5">
-<h5>2020</h5>
+<h5>2022</h5>
 <ul>
-<li><p>Ferraz MAMM, Nagashima JB, <strong>Noonan MJ</strong>, Crosier AE, &amp; Songsasen N. (2020) Oviductal extracellular vesicles improve red wolf and cheetah sperm function post-thawing. International Journal of Molecular Science, 21(10), 3733; DOI: <a href="https://doi.org/10.3390/ijms21103733" class="uri">https://doi.org/10.3390/ijms21103733</a>.</p></li>
-<li><p>Ferraz MAMM, Fujihara M, Nagashima JB, <strong>Noonan MJ</strong>, Inoue-Murayama M &amp; Songsasen N. (2020) Cat follicular extracellular vesicles contain proteins regulating cell signaling pathways that enhance meiotic resumption of vitrified oocytes. Scientific Reports, 10, 8619; DOI: <a href="https://doi.org/10.1038/s41598-020-65497-w" class="uri">https://doi.org/10.1038/s41598-020-65497-w</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Fleming CH, …(76 other authors)…, and Calabrese JM. (2020) Effects of body size on estimation of mammalian area requirements. Conservation Biology, 34(3), 1017 – 1028; DOI: <a href="https://doi.org/10.1111/cobi.13495" class="uri">https://doi.org/10.1111/cobi.13495</a>.</p></li>
+<li><p><strong>Mills CL</strong>, <strong>Savanagouder J</strong>,
+Ferraz MAMM, &amp; <strong>Noonan MJ</strong>. (2022) The need for
+ecologically realistic studies on the health effects of microplastics.
+bioRxiv; DOI: <a href="https://doi.org/10.1101/2022.11.21.517421"
+class="uri">https://doi.org/10.1101/2022.11.21.517421</a>.</p></li>
+<li><p>Socias-Martínez L, Peckre LR, &amp; <strong>Noonan MJ</strong>.
+(2022) Are trapping data still suited for home range estimation? An
+analysis with various estimators, asymptotic models and data ordering
+procedures. bioRxiv; DOI: <a
+href="https://doi.org/10.1101/2022.03.15.484432"
+class="uri">https://doi.org/10.1101/2022.03.15.484432</a>.</p></li>
+<li><p>Medici EP, <strong>Mezzini S</strong>, Fleming CH, Calabrese JM,
+&amp; <strong>Noonan MJ</strong>. (2021) Movement ecology of vulnerable
+lowland tapirs across a gradient of human disturbance. Movement Ecology,
+10(1), 1-12; DOI: <a href="https://doi.org/10.1186/s40462-022-00313-w"
+class="uri">https://doi.org/10.1186/s40462-022-00313-w</a>.</p></li>
+<li><p>Milazzotto MP, <strong>Noonan MJ</strong>, &amp; Ferraz MAMM.
+(2021) RNAseq analysis reveals dynamic metaboloepigenetic profiles of
+human, mouse and bovine pre-implantation embryos. iScience, 25(3),
+103904; DOI: <a href="https://doi.org/10.1101/2021.06.25.449773"
+class="uri">https://doi.org/10.1101/2021.06.25.449773</a>.</p></li>
+<li><p>Fleming CH, Deznabi I, Alavi S, Crofoot MC, Hirsch BT, Medici EP,
+<strong>MJ Noonan</strong>, Kays R, Fagan WF, Sheldon D, &amp; JM
+Calabrese JM (2022) Population-level inference for home-range areas.
+Methods in Ecology and Evolution, 13(5); 1027-1041; DOI: <a
+href="https://doi.org/10.1111/2041-210X.13815"
+class="uri">https://doi.org/10.1111/2041-210X.13815</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Fagan WF, &amp; Fleming CH. (2022) A
+semi-variance approach to visualising phylogenetic autocorrelation.
+Methods in 13(2), 396 – 406; DOI: <a
+href="https://doi.org/10.1111/2041-210X.13763"
+class="uri">https://doi.org/10.1111/2041-210X.13763</a>.</p></li>
+<li><p>Silva I, Fleming CH <strong>Noonan MJ</strong>, Alston J, Folta
+C, Fagan WF, &amp; Calabrese JM. (2022) A semi-variance approach to
+visualising phylogenetic autocorrelation. Methods in Ecology and
+Evolution, 13(3), 534 – 544. DOI: <a
+href="https://doi.org/10.1111/2041-210X.13786"
+class="uri">https://doi.org/10.1111/2041-210X.13786</a>.</p></li>
 </ul>
 </div>
 <div id="section-3" class="section level5">
-<h5>2019</h5>
+<h5>2021</h5>
 <ul>
-<li><p><strong>Noonan MJ</strong>, Fleming CH, Akre T, Dresher-Lehman J, Gurarie E, Harrison AL, Kays R &amp; Calabrese JM. (2019) Scale-insensitive estimation of speed and distance travelled from animal tracking data. Movement Ecology, 7(35), 1 – 15; DOI: <a href="https://doi.org/10.1186/s40462-019-0177-1" class="uri">https://doi.org/10.1186/s40462-019-0177-1</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Tinnesand HV, Müller CT, Rosell F, Macdonald DW, &amp; Buesching CD. (2019) Knowing me, knowing you: anal gland secretion of European badgers (<em>Meles meles</em>) codes for individuality, sex and social group membership. Journal of Chemical Ecology, 45, 823 – 837; DOI: <a href="https://doi.org/10.1007/s10886-019-01113-0" class="uri">https://doi.org/10.1007/s10886-019-01113-0</a>.</p></li>
-<li><p>Fleming CH, __Noonan MJ_, Medici E, &amp; Calabrese, JM. Overcoming the challenge of small effective sample sizes in home-range estimation. (2019) Methods in Ecology and Evolution, 10(10), 1679 – 1689; DOI: <a href="https://doi.org/10.1111/2041-210X.13270" class="uri">https://doi.org/10.1111/2041-210X.13270</a>.</p></li>
-<li><p>Ishii H, Yamazaki K, <strong>Noonan MJ</strong>, Buesching CD, Newman C, &amp; Kaneko Y. (2019) Testing cellular-phone enhanced GPS tracking technology for urban carnivores. Animal Biotelemetry, 7(19), 1–13; DOI: <a href="https://doi.org/10.1186/s40317-019-0180-8" class="uri">https://doi.org/10.1186/s40317-019-0180-8</a>.</p></li>
-<li><p>Ferraz MAMM, Carothers A, Dahal R, <strong>Noonan MJ</strong>, &amp; Songsasen N. (2019) Oviductal extracellular vesicles interact with the spermatozoon’s head and mid-piece and improves its motility and fertilizing ability in the domestic cat. Scientific Reports, 9(9484), 1–12; DOI: <a href="https://doi.org/10.1038/s41598-019-45857-x" class="uri">https://doi.org/10.1038/s41598-019-45857-x</a>.</p></li>
-<li><p>Tucker M, … <strong>Noonan MJ</strong> (with 62 other authors)…, &amp; Mueller T. (2019) Large birds travel farther in homogeneous environments. Global Ecology and Biogeography, 28(5), 1–12; DOI: <a href="https://doi.org/10.1111/geb.12875" class="uri">https://doi.org/10.1111/geb.12875</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, …(53 other authors)…, &amp; Calabrese JM. (2019). A comprehensive analysis of autocorrelation and bias in home range estimation. Ecological Monographs, 89(2):e01344; DOI: <a href="https://doi.org/10.1002/ecm.1344" class="uri">https://doi.org/10.1002/ecm.1344</a>.</p></li>
+<li><p>Fleming CH, Drescher-Lehman J, <strong>Noonan MJ</strong> (with
+34 other authors)…, &amp; Calabrese JM. (2021) A comprehensive framework
+for handling location error in animal tracking data. bioRxiv; DOI: <a
+href="https://doi.org/10.1101/2020.06.12.130195"
+class="uri">https://doi.org/10.1101/2020.06.12.130195</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Ascensão F, Yogui DR, Desbiez ALJ.
+Roads as ecological traps for giant anteaters. Animal Conservation,
+25(2), 182 – 194. DOI: <a href="https://doi.org/10.1111/acv.12728"
+class="uri">https://doi.org/10.1111/acv.12728</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>…(11 other authors)…, &amp; Calabrese
+JM. (2021) Estimating encounter location distributions from animal
+tracking data. Methods in Ecology and Evolution, 12(7), 1158 – 1173.
+DOI: <a href="https://doi.org/10.1111/2041-210X.13597"
+class="uri">https://doi.org/10.1111/2041-210X.13597</a>.</p></li>
+<li><p>Calabrese JM, Fleming CH, <strong>Noonan MJ</strong>, &amp; Dong
+X. (2021) Point-and-click AKDE home range estimation with ctmmweb.
+Wildlife Society Bulletin, 45(1), 162 – 169. DOI: <a
+href="https://doi.org/10.1002/wsb.1154"
+class="uri">https://doi.org/10.1002/wsb.1154</a>.</p></li>
 </ul>
 </div>
 <div id="section-4" class="section level5">
-<h5>2018</h5>
+<h5>2020</h5>
 <ul>
-<li><p><strong>Noonan MJ</strong>, Newman C, Markham A, Buesching CD, Bilham K, &amp; Macdonald DW. (2018) <em>In situ</em> behavioral plasticity as compensation for weather variability: implications for future climate change. Climatic Change, 149(3-4), 457–471; DOI: <a href="https://doi.org/10.1007/s10584-018-2248-5" class="uri">https://doi.org/10.1007/s10584-018-2248-5</a>.</p></li>
-<li><p>Winner K, <strong>Noonan MJ</strong>, Fleming CH, Olson KA, Mueller T, Sheldon D, &amp; Calabrese JM. (2018) Statistical inference for home range overlap. Methods in Ecology and Evolution, 9(7), 1679–1691; DOI: <a href="https://doi.org/10.1111/2041-210X.13027" class="uri">https://doi.org/10.1111/2041-210X.13027</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Tinnesand HV, &amp; Buesching CD. (2018) Normalizing Gas-Chromatography–Mass Spectrometry Data: Method Choice can Alter Biological Inference. BioEssays, 40(6), 1–12; DOI: <a href="https://doi.org/10.1002/bies.201700210" class="uri">https://doi.org/10.1002/bies.201700210</a>.</p></li>
-<li><p>Bilham K, Newman C, Buesching CD, <strong>Noonan MJ</strong>, Boyd AC, Smith AL, &amp; Macdonald DW. (2018) The effects of weather conditions on oxidative stress, oxidative damage and antioxidant capacity in a wild-living mammal, the European badger (<em>Meles meles</em>). Physiological and Biochemical Zoology, 91(4), 987–1004; DOI: <a href="https://doi.org/10.1086/698609" class="uri">https://doi.org/10.1086/698609</a>.</p></li>
-<li><p>Fleming CH, Sheldon D, Fagan WF, Leimgruber P, Mueller T, Nandintsetseg D, <strong>Noonan MJ</strong>, Olson KA, Setyawan E, Sianipar A, &amp; Calabrese JM. (2018) Correcting for missing and irregular data in home-range estimation, Ecological Applications, 28(4), 1003–1010; DOI: <a href="https://doi.org/10.1002/eap.1704" class="uri">https://doi.org/10.1002/eap.1704</a>.</p></li>
+<li><p>Ferraz MAMM, Nagashima JB, <strong>Noonan MJ</strong>, Crosier
+AE, &amp; Songsasen N. (2020) Oviductal extracellular vesicles improve
+red wolf and cheetah sperm function post-thawing. International Journal
+of Molecular Science, 21(10), 3733; DOI: <a
+href="https://doi.org/10.3390/ijms21103733"
+class="uri">https://doi.org/10.3390/ijms21103733</a>.</p></li>
+<li><p>Ferraz MAMM, Fujihara M, Nagashima JB, <strong>Noonan
+MJ</strong>, Inoue-Murayama M &amp; Songsasen N. (2020) Cat follicular
+extracellular vesicles contain proteins regulating cell signaling
+pathways that enhance meiotic resumption of vitrified oocytes.
+Scientific Reports, 10, 8619; DOI: <a
+href="https://doi.org/10.1038/s41598-020-65497-w"
+class="uri">https://doi.org/10.1038/s41598-020-65497-w</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Fleming CH, …(76 other authors)…, and
+Calabrese JM. (2020) Effects of body size on estimation of mammalian
+area requirements. Conservation Biology, 34(3), 1017 – 1028; DOI: <a
+href="https://doi.org/10.1111/cobi.13495"
+class="uri">https://doi.org/10.1111/cobi.13495</a>.</p></li>
 </ul>
 </div>
 <div id="section-5" class="section level5">
-<h5>2017</h5>
+<h5>2019</h5>
 <ul>
-<li>Johnson PJ, <strong>Noonan MJ</strong>, Kitchener A, Harrington LA, Newman C, &amp; Macdonald DW. (2017) Rensching Cats and Dogs: Feeding ecology and fecundity trends explain variation in the allometry of sexual size dimorphism. Royal Society Open Science, 4(6): 170453; DOI: <a href="https://doi.org/10.1098/rsos.170453" class="uri">https://doi.org/10.1098/rsos.170453</a>.</li>
+<li><p><strong>Noonan MJ</strong>, Fleming CH, Akre T, Dresher-Lehman J,
+Gurarie E, Harrison AL, Kays R &amp; Calabrese JM. (2019)
+Scale-insensitive estimation of speed and distance travelled from animal
+tracking data. Movement Ecology, 7(35), 1 – 15; DOI: <a
+href="https://doi.org/10.1186/s40462-019-0177-1"
+class="uri">https://doi.org/10.1186/s40462-019-0177-1</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Tinnesand HV, Müller CT, Rosell F,
+Macdonald DW, &amp; Buesching CD. (2019) Knowing me, knowing you: anal
+gland secretion of European badgers (<em>Meles meles</em>) codes for
+individuality, sex and social group membership. Journal of Chemical
+Ecology, 45, 823 – 837; DOI: <a
+href="https://doi.org/10.1007/s10886-019-01113-0"
+class="uri">https://doi.org/10.1007/s10886-019-01113-0</a>.</p></li>
+<li><p>Fleming CH, __Noonan MJ_, Medici E, &amp; Calabrese, JM.
+Overcoming the challenge of small effective sample sizes in home-range
+estimation. (2019) Methods in Ecology and Evolution, 10(10), 1679 –
+1689; DOI: <a href="https://doi.org/10.1111/2041-210X.13270"
+class="uri">https://doi.org/10.1111/2041-210X.13270</a>.</p></li>
+<li><p>Ishii H, Yamazaki K, <strong>Noonan MJ</strong>, Buesching CD,
+Newman C, &amp; Kaneko Y. (2019) Testing cellular-phone enhanced GPS
+tracking technology for urban carnivores. Animal Biotelemetry, 7(19),
+1–13; DOI: <a href="https://doi.org/10.1186/s40317-019-0180-8"
+class="uri">https://doi.org/10.1186/s40317-019-0180-8</a>.</p></li>
+<li><p>Ferraz MAMM, Carothers A, Dahal R, <strong>Noonan MJ</strong>,
+&amp; Songsasen N. (2019) Oviductal extracellular vesicles interact with
+the spermatozoon’s head and mid-piece and improves its motility and
+fertilizing ability in the domestic cat. Scientific Reports, 9(9484),
+1–12; DOI: <a href="https://doi.org/10.1038/s41598-019-45857-x"
+class="uri">https://doi.org/10.1038/s41598-019-45857-x</a>.</p></li>
+<li><p>Tucker M, … <strong>Noonan MJ</strong> (with 62 other authors)…,
+&amp; Mueller T. (2019) Large birds travel farther in homogeneous
+environments. Global Ecology and Biogeography, 28(5), 1–12; DOI: <a
+href="https://doi.org/10.1111/geb.12875"
+class="uri">https://doi.org/10.1111/geb.12875</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, …(53 other authors)…, &amp; Calabrese
+JM. (2019). A comprehensive analysis of autocorrelation and bias in home
+range estimation. Ecological Monographs, 89(2):e01344; DOI: <a
+href="https://doi.org/10.1002/ecm.1344"
+class="uri">https://doi.org/10.1002/ecm.1344</a>.</p></li>
 </ul>
 </div>
 <div id="section-6" class="section level5">
-<h5>2016</h5>
+<h5>2018</h5>
 <ul>
-<li><strong>Noonan MJ</strong>, Johnson PJ, Kitchener A, Harrington LA, Newman C, &amp; Macdonald DW. (2016) Sexual size dimorphism in musteloids: An anomalous allometric pattern is explained by feeding ecology. Ecology and Evolution, 6(23): 8495–8501; DOI: <a href="https://doi.org/10.1002/ece3.2480" class="uri">https://doi.org/10.1002/ece3.2480</a>.</li>
+<li><p><strong>Noonan MJ</strong>, Newman C, Markham A, Buesching CD,
+Bilham K, &amp; Macdonald DW. (2018) <em>In situ</em> behavioral
+plasticity as compensation for weather variability: implications for
+future climate change. Climatic Change, 149(3-4), 457–471; DOI: <a
+href="https://doi.org/10.1007/s10584-018-2248-5"
+class="uri">https://doi.org/10.1007/s10584-018-2248-5</a>.</p></li>
+<li><p>Winner K, <strong>Noonan MJ</strong>, Fleming CH, Olson KA,
+Mueller T, Sheldon D, &amp; Calabrese JM. (2018) Statistical inference
+for home range overlap. Methods in Ecology and Evolution, 9(7),
+1679–1691; DOI: <a href="https://doi.org/10.1111/2041-210X.13027"
+class="uri">https://doi.org/10.1111/2041-210X.13027</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Tinnesand HV, &amp; Buesching CD.
+(2018) Normalizing Gas-Chromatography–Mass Spectrometry Data: Method
+Choice can Alter Biological Inference. BioEssays, 40(6), 1–12; DOI: <a
+href="https://doi.org/10.1002/bies.201700210"
+class="uri">https://doi.org/10.1002/bies.201700210</a>.</p></li>
+<li><p>Bilham K, Newman C, Buesching CD, <strong>Noonan MJ</strong>,
+Boyd AC, Smith AL, &amp; Macdonald DW. (2018) The effects of weather
+conditions on oxidative stress, oxidative damage and antioxidant
+capacity in a wild-living mammal, the European badger (<em>Meles
+meles</em>). Physiological and Biochemical Zoology, 91(4), 987–1004;
+DOI: <a href="https://doi.org/10.1086/698609"
+class="uri">https://doi.org/10.1086/698609</a>.</p></li>
+<li><p>Fleming CH, Sheldon D, Fagan WF, Leimgruber P, Mueller T,
+Nandintsetseg D, <strong>Noonan MJ</strong>, Olson KA, Setyawan E,
+Sianipar A, &amp; Calabrese JM. (2018) Correcting for missing and
+irregular data in home-range estimation, Ecological Applications, 28(4),
+1003–1010; DOI: <a href="https://doi.org/10.1002/eap.1704"
+class="uri">https://doi.org/10.1002/eap.1704</a>.</p></li>
 </ul>
 </div>
 <div id="section-7" class="section level5">
-<h5>2015</h5>
+<h5>2017</h5>
 <ul>
-<li><p>Tinnesand HV, Buesching CD, <strong>Noonan MJ</strong>, Newman C, Zedrosser A, Rosell F, &amp; Macdonald DW. (2015) Will Trespassers Be Prosecuted or Assessed According to Their Merits? A Consilient Interpretation of Territoriality in a Group-Living Carnivore, the European Badger (<em>Meles meles</em>). PLoS One, 10(7), e0132432; DOI: <a href="https://doi.org/10.1371/journal.pone.0132432" class="uri">https://doi.org/10.1371/journal.pone.0132432</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Newman C, Buesching CD, &amp; Macdonald DW. (2015) Evolution and function of fossoriality in the Carnivora: implications for group-living. Frontiers in Ecology and Evolution, 3(116), 1–14; DOI: <a href="https://doi.org/10.3389/fevo.2015.00116" class="uri">https://doi.org/10.3389/fevo.2015.00116</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Abidur Rahman M, Newman C, Buesching CD, &amp; Macdonald DW. (2015) Avoiding verisimilitude when modelling ecological responses to climate change: The influence of weather conditions on trapping efficiency in European badgers (<em>Meles meles</em>). Global Change Biology, 21(20), 3575–3585; DOI: <a href="https://doi.org/10.1111/gcb.12942" class="uri">https://doi.org/10.1111/gcb.12942</a>.</p></li>
-<li><p><strong>Noonan MJ</strong>, Markham A, Newman C, Trigoni N, Buesching CD, Ellwood SA, &amp; Macdonald DW. (2015) A new Magneto-Inductive tracking technique to uncover subterranean activity: What do animals do underground? Methods in Ecology and Evolution, 6(5), 510–520; DOI: <a href="https://doi.org/10.1111/2041-210X.12348" class="uri">https://doi.org/10.1111/2041-210X.12348</a>.</p></li>
+<li>Johnson PJ, <strong>Noonan MJ</strong>, Kitchener A, Harrington LA,
+Newman C, &amp; Macdonald DW. (2017) Rensching Cats and Dogs: Feeding
+ecology and fecundity trends explain variation in the allometry of
+sexual size dimorphism. Royal Society Open Science, 4(6): 170453; DOI:
+<a href="https://doi.org/10.1098/rsos.170453"
+class="uri">https://doi.org/10.1098/rsos.170453</a>.</li>
 </ul>
 </div>
 <div id="section-8" class="section level5">
-<h5>2014</h5>
+<h5>2016</h5>
 <ul>
-<li><strong>Noonan MJ</strong>, Markham A, Newman C, Trigoni N, Buesching CD, Ellwood SA, &amp; Macdonald DW. (2014) Climate and the Individual: Inter-Annual Variation in the Autumnal Activity of the European Badger (<em>Meles meles</em>). PloS One, 9(1), e83156; DOI: <a href="https://doi.org/10.1371/journal.pone.0083156" class="uri">https://doi.org/10.1371/journal.pone.0083156</a>.</li>
+<li><strong>Noonan MJ</strong>, Johnson PJ, Kitchener A, Harrington LA,
+Newman C, &amp; Macdonald DW. (2016) Sexual size dimorphism in
+musteloids: An anomalous allometric pattern is explained by feeding
+ecology. Ecology and Evolution, 6(23): 8495–8501; DOI: <a
+href="https://doi.org/10.1002/ece3.2480"
+class="uri">https://doi.org/10.1002/ece3.2480</a>.</li>
 </ul>
 </div>
 <div id="section-9" class="section level5">
+<h5>2015</h5>
+<ul>
+<li><p>Tinnesand HV, Buesching CD, <strong>Noonan MJ</strong>, Newman C,
+Zedrosser A, Rosell F, &amp; Macdonald DW. (2015) Will Trespassers Be
+Prosecuted or Assessed According to Their Merits? A Consilient
+Interpretation of Territoriality in a Group-Living Carnivore, the
+European Badger (<em>Meles meles</em>). PLoS One, 10(7), e0132432; DOI:
+<a href="https://doi.org/10.1371/journal.pone.0132432"
+class="uri">https://doi.org/10.1371/journal.pone.0132432</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Newman C, Buesching CD, &amp;
+Macdonald DW. (2015) Evolution and function of fossoriality in the
+Carnivora: implications for group-living. Frontiers in Ecology and
+Evolution, 3(116), 1–14; DOI: <a
+href="https://doi.org/10.3389/fevo.2015.00116"
+class="uri">https://doi.org/10.3389/fevo.2015.00116</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Abidur Rahman M, Newman C, Buesching
+CD, &amp; Macdonald DW. (2015) Avoiding verisimilitude when modelling
+ecological responses to climate change: The influence of weather
+conditions on trapping efficiency in European badgers (<em>Meles
+meles</em>). Global Change Biology, 21(20), 3575–3585; DOI: <a
+href="https://doi.org/10.1111/gcb.12942"
+class="uri">https://doi.org/10.1111/gcb.12942</a>.</p></li>
+<li><p><strong>Noonan MJ</strong>, Markham A, Newman C, Trigoni N,
+Buesching CD, Ellwood SA, &amp; Macdonald DW. (2015) A new
+Magneto-Inductive tracking technique to uncover subterranean activity:
+What do animals do underground? Methods in Ecology and Evolution, 6(5),
+510–520; DOI: <a href="https://doi.org/10.1111/2041-210X.12348"
+class="uri">https://doi.org/10.1111/2041-210X.12348</a>.</p></li>
+</ul>
+</div>
+<div id="section-10" class="section level5">
+<h5>2014</h5>
+<ul>
+<li><strong>Noonan MJ</strong>, Markham A, Newman C, Trigoni N,
+Buesching CD, Ellwood SA, &amp; Macdonald DW. (2014) Climate and the
+Individual: Inter-Annual Variation in the Autumnal Activity of the
+European Badger (<em>Meles meles</em>). PloS One, 9(1), e83156; DOI: <a
+href="https://doi.org/10.1371/journal.pone.0083156"
+class="uri">https://doi.org/10.1371/journal.pone.0083156</a>.</li>
+</ul>
+</div>
+<div id="section-11" class="section level5">
 <h5>2012</h5>
 <ul>
-<li><strong>Noonan MJ</strong>, Grant JWA, &amp; Jackson CD. (2012) A quantitative assessment of fish passage efficiency. Fish and Fisheries, 13(4), 450–464; DOI: <a href="https://doi.org/10.1111/j.1467-2979.2011.00445.x" class="uri">https://doi.org/10.1111/j.1467-2979.2011.00445.x</a>.</li>
+<li><strong>Noonan MJ</strong>, Grant JWA, &amp; Jackson CD. (2012) A
+quantitative assessment of fish passage efficiency. Fish and Fisheries,
+13(4), 450–464; DOI: <a
+href="https://doi.org/10.1111/j.1467-2979.2011.00445.x"
+class="uri">https://doi.org/10.1111/j.1467-2979.2011.00445.x</a>.</li>
 </ul>
 </div>
 </div>
-</div>
-<div id="section-10" class="section level2 unnumbered">
+<div id="section-12" class="section level2 unnumbered">
 <h2 class="unnumbered"></h2>
+</div>
+</div>
 <a id="NEWS"></a> </br>
 <center>
 <img src="Images/heatmap.png" alt="drawing" width="100%" />
@@ -466,25 +799,151 @@ NEWS
 </h2>
 </center>
 <p></br></p>
-<div id="section-11" class="section level4 tabset">
-<h4 class="tabset">2022</h4>
+<div style="text-align: left;">
+<div id="section-13" class="section level4 tabset">
+<h4 class="tabset">2024</h4>
 <ul>
-<li><p>Joy Savanagouder is joining the lab to carry out a summer research project focused on terrestrial microplastics. Welcome Joy!</p></li>
-<li><p>Ryan Gill has received funding from Environment and Climate Change Canada to study the impacts of COVID-19 induced travel restrictions on southern mountain caribou. Congratulations Ryan!</p></li>
-<li><p>Sandra Cuadros has received a Future Conservationist Award (Conservation Leadership Programme). Congratulations Sandra!</p></li>
-<li><p>Two new members have been officially admitted to graduate programs at UBC-O. Welcome Cynthia Lauren Mills and Helen Louise Bontrager!</p></li>
-<li><p>Good news! We’ve received funding from BC Parks to study the effects of climate change on mammals in BC. Funds will go to supporting student salaries.</p></li>
-<li><p>Good news! We’ve received funding from Ludwig Maximilian University of Munich to study the effects of micro-plastics in terrestrial systems. Funds will go to hiring a lab-technician who will be based in Germany. Details here: <a href="https://twitter.com/MarciaFerraz11/status/1479197095076798466/photo/1" class="uri">https://twitter.com/MarciaFerraz11/status/1479197095076798466/photo/1</a></p></li>
+<li><p>Fresh off the presses! Dayna’s first authored research paper,
+“How climate change and population growth will shape attendance and
+human-wildlife interactions at British Columbia parks” has been accepted
+and has been published in the Journal of Sustainable Tourism. Read it
+here: <a href="https://doi.org/10.1080/09669582.2024.2331228"
+class="uri">https://doi.org/10.1080/09669582.2024.2331228</a>.
+Congratulations Dayna!</p></li>
+<li><p>Exciting news! Erika will be presenting at the MURC conference in
+British Columbia on a user-friendly software package in R for processing
+microbial genetic data.</p></li>
+<li><p>Sandra Cuadros received the TWS travel grant to present her work
+at Wildlife Society Conference in Jasper, AB. Congratulations
+Sandra!</p></li>
+<li><p>Exciting news! Stefano, Sandra, Lauren and Aimee will be
+presenting their research at the Wildlife Society Conference in Jasper,
+AB.</p></li>
+<li><p>April Martining is joining the lab as a post-doctoral researcher.
+Welcome April!</p></li>
+<li><p>The Quantitative Ecology Lab participated in Experience UBCO
+2024. Great turn out! Visitors were able to get their first experience
+in simulating animal movement.</p></li>
+<li><p>Fantastic News! Stefano Mezzini has successfully passed his
+doctoral comprehensive exam. Congratulations Stefano!</p></li>
+<li><p>Victoria Baker is joining the lab to carry out a Directed Studies
+project focused on how timber harvest affects woodland caribou habitat
+and conservation. Welcome Victoria!</p></li>
 </ul>
-<div id="section-12" class="section level5">
+<div id="section-14" class="section level5">
+<h5>2023</h5>
+<ul>
+<li><p>Aimee Chhen has been officially admitted to the MSc program at
+UBC-O. Welcome back Aimee!</p></li>
+<li><p>Exciting news! Stefano will be presenting at the Gordon Research
+Conference and Gordon Research Seminar in Barga, Italy, on the effects
+of resource abundance and stochasticity on orgamism’s space-use
+requirements.</p></li>
+<li><p>Stefano Mezzini received the UBCO travel grant to present his
+work at the the Gordon Research Conference and Gordon Research Seminar
+in Barga, Italy. Congratulations Stefano!</p></li>
+<li><p>Grace Lou is joining the lab to carry out an Honours project
+focused on modelling human wildlife conflicts with productivity in
+Canadian National Parks. Welcome Grace!</p></li>
+<li><p>Daniella de Vries is joining the lab to carry out an Honours
+project the recovery rate of productivity of forests after disturbance
+events from wildfires and cut blocks in the Okanagan. Welcome
+Daniella!</p></li>
+<li><p>Nozomu Hirama is joining the lab to carry out an Honours project
+focused on modelling long-term trends in mammalian sperm quality.
+Welcome Nozo!</p></li>
+<li><p>Great news! Rekha Marcus has been awarded the Irving K. Barber
+Faculty of Science Undergraduate Research Award to study environmental
+conditions in protected areas and how we can better select protected
+areas. Congratulations Rekha!</p></li>
+<li><p>Great News! Erika Lin has been awarded the UBCO Irving K. Barber
+Faculty of Science Undergraduate Research Award to building a workflow
+to study the effects of microplastics on soil microbiota.
+Congratulations Erika!</p></li>
+<li><p>Rekha Marcus is joining the lab to carry out an Honours project
+focused on environmental conditions in protected areas and how we can
+better select protected areas. Welcome Rekha!</p></li>
+<li><p>Erika Lin is joining the lab to carry out an Honours project
+focused on developing a user-friendly software package in R for
+processing microbial genetic data. Welcome Erika!</p></li>
+<li><p>Exciting news! Dayna will be presenting at the MURC conference in
+British Columbia on the effect of climate change and population growth
+on attendance in BC Parks.</p></li>
+<li><p>Stefano Mezzini has officially been admitted to fast-track to a
+PhD degree. Congratulations Stefano!</p></li>
+</ul>
+</div>
+<div id="section-15" class="section level5">
+<h5>2022</h5>
+<ul>
+<li><p>Exciting news! Stefano presented at the PARF conference in
+Nanaimo, British Columbia, on the effects of temperature and climate
+change on mammal movement in British Columbia.</p></li>
+<li><p>Exciting news! Dayna presented at the PARF conference in Nanaimo,
+British Columbia, the effect of climate change and population growth on
+attendance in BC Parks.</p></li>
+<li><p>Exciting news! Stefano Mezzini was awarded the Top Talk and
+People’s Choice at the UBC Okanagan Biology Graduate Symposium.
+Congratulations Stefano!</p></li>
+<li><p>Stefano Mezzini has received funding from Living Labs to study
+the effects of temperature and climate change on mammal movement in
+British Columbia. Congratulations Stefano!</p></li>
+<li><p>Evan Lewis is joining the lab to carry out a Directed Studies
+project on avian ecology. Welcome Evan!</p></li>
+<li><p>Aimee Chhen is joining the lab to carry out a Directed Studies
+project focused on the sociality of Giant Anteater in Brazil and an
+additional project on the human-wildlife interactions in National Parks
+in British Columbia. Welcome Aimee!</p></li>
+<li><p>Dayna Westsrate is joining the lab to carry out an Honours
+project focused on the effect of climate change and population growth on
+attendance in BC Parks. Welcome Dayna!</p></li>
+<li><p>Joy Savanagouder is joining the lab to carry out a summer
+research project focused on terrestrial microplastics. Welcome
+Joy!</p></li>
+<li><p>Stefano Mezzini has received funding from MITACS to study the
+impacts of COVID-19 induced travel restrictions on southern mountain
+caribou. Congratulations Stefano!</p></li>
+<li><p>Ryan Gill has received funding from Environment and Climate
+Change Canada to study the impacts of COVID-19 induced travel
+restrictions on southern mountain caribou. Congratulations
+Ryan!</p></li>
+<li><p>Sandra Cuadros has received a Future Conservationist Award
+(Conservation Leadership Programme). Congratulations Sandra!</p></li>
+<li><p>Lauren Mills has been officially admitted to graduate programs at
+UBC-O to study. Welcome Lauren!</p></li>
+<li><p>Good news! We’ve received funding from BC Parks to study the
+effects of climate change on mammals in BC. Funds will go to supporting
+student salaries.</p></li>
+<li><p>Good news! We’ve received funding from Ludwig Maximilian
+University of Munich to study the effects of micro-plastics in
+terrestrial systems. Funds will go to hiring a lab-technician who will
+be based in Germany. Details here: <a
+href="https://twitter.com/MarciaFerraz11/status/1479197095076798466/photo/1"
+class="uri">https://twitter.com/MarciaFerraz11/status/1479197095076798466/photo/1</a></p></li>
+</ul>
+</div>
+<div id="section-16" class="section level5">
 <h5>2021</h5>
 <ul>
-<li><p>Graduate student Sandra Cuadros has been awarded a Graduate Dean’s Entrance Scholarship. Congratulations Sandra!</p></li>
-<li><p>Two new members have been officially admitted to graduate programs at UBC-O. Welcome Sandra Cuadros and Ryan Gill!</p></li>
-<li><p>Graduate student Stefano Mezzini has been awarded a Graduate Dean’s Entrance Scholarship. Congratulations Stefano!</p></li>
-<li><p>Stefano Mezzini has been officially admitted to the MSc program at UBC-O. Welcome Stefano!</p></li>
-<li><p>The quantitative Ecology Lab has been awarded an <a href="https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ResearchGrants-SubventionsDeRecherche/ResultsGSCDetail-ResultatsCSSDetails_eng.asp?Year=2021&amp;GSC=1503">NSERC Discovery Grant</a> to support the lab’s work over the next 5 years.</p></li>
+<li><p>Graduate student Sandra Cuadros has been awarded a Graduate
+Dean’s Entrance Scholarship. Congratulations Sandra!</p></li>
+<li><p>Two new members have been officially admitted to graduate
+programs at UBC-O. Welcome Sandra Cuadros and Ryan Gill!</p></li>
+<li><p>Graduate student Stefano Mezzini has been awarded a Graduate
+Dean’s Entrance Scholarship. Congratulations Stefano!</p></li>
+<li><p>Stefano Mezzini has been officially admitted to the MSc program
+at UBC-O. Welcome Stefano!</p></li>
+<li><p>The Quantitative Ecology Lab has been awarded an <a
+href="https://www.nserc-crsng.gc.ca/NSERC-CRSNG/FundingDecisions-DecisionsFinancement/ResearchGrants-SubventionsDeRecherche/ResultsGSCDetail-ResultatsCSSDetails_eng.asp?Year=2021&amp;GSC=1503">NSERC
+Discovery Grant</a> to support the lab’s work over the next 5
+years.</p></li>
 </ul>
+</div>
+</div>
+<div id="section-17" class="section level2 unnumbered">
+<h2 class="unnumbered"></h2>
+</div>
+</div>
 <p><a id="OPPORTUNITIES"></a> </br></p>
 <p><img src="Images/okanagan_campus.jpg" alt="drawing" width="100%" /></p>
 <center>
@@ -492,15 +951,36 @@ NEWS
 OPPORTUNITIES
 </h2>
 </center>
-<p>There are currently no open positions for which we are actively recruiting. However, if you’re interested in joining the Quantitative Ecology Lab, you are welcome to email us your CV, unofficial transcripts, a brief blurb about yourself and your interests, and what aspects of the lab’s research interest you.</p>
+<div style="text-align: left;">
+<p>There are currently no open positions for which we are actively
+recruiting. However, if you’re interested in joining the Quantitative
+Ecology Lab, you are welcome to email us your CV, unofficial
+transcripts, a brief blurb about yourself and your interests, and what
+aspects of the lab’s research interest you.</p>
 <p></br></p>
-<p><strong>General guidelines for prospective students</strong>: We expect prospective students to have consulted the general information provided at the Biology Graduate program webpage prior to contacting me. Students in the Quantitative Ecology Lab gain valuable experience in quantitative methods, data management / analysis, <code>R</code> usage, and <code>R</code> package development. These skills and experiences are aimed at helping our students find full time employment and / or further their academic careers.</p>
+<p><strong>General guidelines for prospective students</strong>: We
+expect prospective students to have consulted the general information
+provided at the Biology Graduate program webpage prior to contacting me.
+Students in the Quantitative Ecology Lab gain valuable experience in
+quantitative methods, data management / analysis, <code>R</code> usage,
+and <code>R</code> package development. These skills and experiences are
+aimed at helping our students find full time employment and / or further
+their academic careers.</p>
 <p></br></p>
-<p>Prospective students are encouraged to seek their own sources of external funding (e.g. NSERC), and to be competitive for internal grants available at UBC.</p>
+<p>Prospective students are encouraged to seek their own sources of
+external funding (e.g. NSERC), and to be competitive for internal grants
+available at UBC.</p>
 <p></br></p>
-<p>General information about graduate studies at the Okanagan campus and in biology:</p>
-<p><a href="https://biology.ok.ubc.ca/graduate/biology/">UBC Okanagan Biology graduate program</a></p>
-<p><a href="https://gradstudies.ok.ubc.ca">Graduate School at UBC Okanagan</a> </br>  </p>
+<p>General information about graduate studies at the Okanagan campus and
+in biology:</p>
+<p><a href="https://biology.ok.ubc.ca/graduate/biology/">UBC Okanagan
+Biology graduate program</a></p>
+<p><a href="https://gradstudies.ok.ubc.ca">Graduate School at UBC
+Okanagan</a> </br>  </p>
+<div id="section-18" class="section level2 unnumbered">
+<h2 class="unnumbered"></h2>
+</div>
+</div>
 <p><a id="FUNDING"></a> </br></p>
 <center>
 <h2>
@@ -510,11 +990,8 @@ FUNDING &amp; PARTNERS
 <p></br>  </p>
 <div class="full-width">
 <center>
-<img src="Images/Funding_Partners.png" alt="drawing" width="30%" style="margin-top:3%;"/>
+<img src="Images/partners/Funding_Partners.png" alt="drawing" width="30%" style="margin-top:3%;"/>
 </center>
-</div>
-</div>
-</div>
 </div>
 
 <footer class="footer">
