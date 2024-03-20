@@ -159,7 +159,6 @@ Nozo Hirama|
 
 <span style="font-size: 3em;">😊</span>
 
-
 Daniella de Vries |
 <a href="mailto:ddvries762@gmail.com"><i class="fas fa-envelope"></i></a>
 <a href="https://www.linkedin.com/in/daniella-de-vries-1a0761184/"><i class="fab fa-linkedin"></i></a>
@@ -380,6 +379,8 @@ The Quantitative Ecology lab has established an international team, comprised of
 #### 2024 {.tabset} 
 
 * Fresh off the presses! Dayna's first authored research paper, "How climate change and population growth will shape attendance and human-wildlife interactions at British Columbia parks" has been accepted and has been published in the Journal of Sustainable Tourism. Read it here:  https://doi.org/10.1080/09669582.2024.2331228. Congratulations Dayna!
+
+* Erika Lin has been awarded the NSERC Undergraduate Research Grant for a project focused on habitat connectivity by reviewing and developing statistical methods for the estimation of migratory corridors. Congratulations Erika!
 
 * Exciting news! Erika will be presenting at the MURC conference in British Columbia on a user-friendly software package in R for processing microbial genetic data.
 
