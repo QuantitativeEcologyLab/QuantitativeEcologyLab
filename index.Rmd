@@ -121,7 +121,7 @@ MSc Student, Department of Biology
 
 </br>
 
-<img src="Images/members/chhen.jpg" alt="drawing" width="20%"/>
+<img src="Images/members/achhen.jpg" alt="drawing" width="20%"/>
 
 Aimee Chhen |
 <a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -193,7 +193,7 @@ Dayna Westsrate | 2022-2023
 
 </br>
 
-<img src="Images/members/chhen.jpg" alt="drawing" width="20%"/>
+<img src="Images/members/achhen.jpg" alt="drawing" width="20%"/>
 
 Aimee Chhen | 2022-2023
 <a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a> 
@@ -204,7 +204,7 @@ Evan Lewis | 2022
 
 </br>
 
-Joy Savanagoude | 2022
+Joy Savanagouder | 2022
 
 </center>
 
@@ -266,7 +266,7 @@ The Quantitative Ecology lab has established an international team, comprised of
 
 * __Chhen A__, Bertassoni A, Desbiez ALJ & __Noonan MJ__. (2023) The socio-spatial ecology of giant anteaters in the Brazilian Cerrado. bioRxiv; DOI: https://doi.org/10.1101/2023.10.04.560744.
 
-* __Gills R__, Serrouy R, Calver AM, Ford A, Steenwe R & __Noonan MJ__. (2023) Movement ecology of endangered caribou during a COVID-19 mediated pause in winter recreation. Animal Conservation; DOI: https://doi.org/10.1111/acv.12912.
+* __Gill R__, Serrouy R, Calver AM, Ford A, Steenwe R & __Noonan MJ__. (2023) Movement ecology of endangered caribou during a COVID-19 mediated pause in winter recreation. Animal Conservation; DOI: https://doi.org/10.1111/acv.12912.
 
 * __Mezzini S__, Fleming CH, Medici EP, & __Noonan MJ__. (2023) How resource abundance and stochasticity affect organisms’ space-use requirements. bioRxiv; DOI: https://doi.org/10.1101/2023.11.03.565563. 
 
