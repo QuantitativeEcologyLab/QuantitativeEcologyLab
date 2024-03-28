@@ -62,12 +62,13 @@ Assistant Professor, Department of Biology
 <center> <h3>RESEARCH ASSOCIATES</h3> </center>
 
 <center>
-<span style="font-size: 3em;">😊</span>
+<img src="Images/members/april5.png" alt="drawing" width="20%"/>
 
 
 April Martinig |
+<a href="https://martinig.weebly.com/"><i class="fab fa-weebly"></i></a>
 
-Post-Doctoral, Department of Biology
+Banting postdoctoral fellow, Department of Biology
 
 <center>
 
@@ -192,10 +193,7 @@ Dayna Westsrate | 2022-2023
 
 </br>
 
-<img src="Images/members/achhen.jpg" alt="drawing" width="20%"/>
-
 Aimee Chhen | 2022-2023
-<a href="mailto:katchhen@gmail.com"><i class="fas fa-envelope"></i></a> 
 
 </br>
 
